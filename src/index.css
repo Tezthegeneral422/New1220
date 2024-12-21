@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply font-sans antialiased bg-gray-50 dark:bg-background-dark text-gray-900 dark:text-white transition-colors;
+  }
+}
+
+.dark {
+  color-scheme: dark;
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-button-primary text-black font-medium px-4 py-2 rounded-md hover:opacity-90 transition-opacity;
+  }
+  
+  .card {
+    @apply bg-white dark:bg-background-cardLight rounded-lg shadow-sm hover:shadow-md transition-all;
+  }
+
+  .input {
+    @apply bg-white dark:bg-background-card border border-white dark:border-gray-600 rounded-md shadow-sm focus:border-button-primary focus:ring focus:ring-button-primary focus:ring-opacity-50 dark:text-white;
+  }
+
+  .section {
+    @apply bg-white dark:bg-background-cardLight rounded-lg shadow-sm p-6;
+  }
+}
